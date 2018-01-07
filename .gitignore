@@ -1,0 +1,8 @@
+*.idea/
+*.sublime-workspace
+*.sublime-project
+*.pyc
+*.sqlite3
+*.coverage
+
+venv/

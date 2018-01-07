@@ -1,0 +1,16 @@
+{% extends 'pageparser/base.html' %}
+{% block content %}
+<form method="POST" class="post-form" novalidate>
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.as_p }}
+        <small class="text-center form-text text-muted">Введите ссылку на страницу, которую требуется "отчистить"</small>
+    </div>
+    <button type="submit" class="save btn btn-success btn-lg btn-block">Чище!</button>
+</form>
+<br><br><br>
+{% if page %}
+{{ page|safe }}
+{% endif %}
+<br><br><br>
+{% endblock %}
